@@ -11,7 +11,8 @@ class MarksController < ApplicationController
   		flash[:notice] = "good."
   		redirect_to :action => 'index'
   	else
-  		  		render(:action=> 'new')
+  		flash[:notice]=@mark.errors.full_messages.to_sentence
+  		render(:action=> 'new')
   	end
   end
 	def mark_params
