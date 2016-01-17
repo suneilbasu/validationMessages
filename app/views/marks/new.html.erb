@@ -1,0 +1,10 @@
+<h1>Marks#new</h1>
+	<%= form_for Mark.new do |n| %>
+	<% if @mark.errors.any? %>
+
+	<% end %>
+	<%= n.text_field :studentName %>
+	<%= n.text_field :project %>
+	<%= n.text_field :dob %>
+	<%= n.submit 'submit' %>
+<% end %>
